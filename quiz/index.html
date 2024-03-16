@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baykar Front-end Case - Quiz</title>
+    <style>
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options button {
+            margin-right: 10px;
+        }
+
+        #answers-container {
+            margin-top: 20px;
+        }
+
+        button.active {
+            background-color: blue;
+            color: #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div id="questions-container"></div>
+        <div id="answers-container"></div>
+    </div>
+
+    <script>
+        const questionsContainer = document.getElementById('questions-container');
+        const answersContainer = document.getElementById('answers-container');
+        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+        let questions = [];
+        let answers = [];
+        let currentQuestionIndex = 0;
+        let totalQuestion = 10;
+        const QUESTION_OPTIONS_TIME = 10000;
+        const NEXT_QUESTION_TIME = 3000;
+        let startTime;
+
+        async function fetchQuestions() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                questions = data.slice(0, totalQuestion);
+                renderQuestion();
+            } catch (error) {
+                console.error('Error fetching questions:', error);
+            }
+        }
+
+        function renderQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            const questionElement = document.createElement('div');
+            questionElement.classList.add('question');
+            questionElement.innerHTML = `
+                <h2>${currentQuestion.title}</h2>
+                <p>${currentQuestion.body}</p>
+                <div class="options">
+                ${generateOptions(currentQuestion.body)}
+                </div>
+            `;
+            questionsContainer.innerHTML = '';
+            questionsContainer.appendChild(questionElement);
+
+            startTime = Date.now();
+            setTimeout(enableOptions, QUESTION_OPTIONS_TIME);
+            setTimeout(renderNextQuestion, NEXT_QUESTION_TIME);
+        }
+
+        function enableOptions() {
+            const options = document.querySelectorAll('.options button');
+            options.forEach(option => {
+                option.disabled = false;
+            });
+        }
+
+        function disableOptions() {
+            const options = document.querySelectorAll('.options button');
+            options.forEach(option => {
+                option.disabled = true;
+            });
+        }
+
+        function generateOptions(text) {
+            const words = text.split(' ').filter(word => word.length > 3);
+            const shuffledWords = shuffleArray(words);
+            const options = ['A', 'B', 'C', 'D'];
+            return shuffledWords.slice(0, 4).map((word, index) => `
+                <button class="option" data-answer="${options[index]}" disabled>${options[index]}) ${word}</button>
+            `).join('');
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function renderNextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+            } else {
+                showAnswers();
+            }
+        }
+
+        function handleAnswerClick(event) {
+            const answer = event.target.dataset.answer;
+            const questionId = questions[currentQuestionIndex].id;
+            const questionTitle = questions[currentQuestionIndex].title;
+            event.target.classList.add('active');
+            disableOptions();
+            const userAnswer = { questionId, questionTitle, answer };
+            answers.push(userAnswer);
+        }
+
+        function showAnswers() {
+            questionsContainer.innerHTML = '';
+            const heading = document.createElement('h2');
+            heading.textContent = 'Answers';
+            answersContainer.appendChild(heading);
+
+            const table = document.createElement('table');
+            table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>User's Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${answers.map(answer => `
+                <tr>
+                    <td>${answer.questionTitle}</td>
+                    <td>${answer.answer}</td>
+                </tr>
+            `).join('')}
+        </tbody>
+        `;
+            answersContainer.appendChild(table);
+        }
+
+        function initialize() {
+            questionsContainer.addEventListener('click', function (event) {
+                if (event.target.classList.contains('option')) {
+                    handleAnswerClick(event);
+                }
+            });
+            fetchQuestions();
+        }
+
+        initialize();
+    </script>
+</body>
+
+</html>
