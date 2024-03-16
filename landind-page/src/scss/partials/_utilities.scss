@@ -1,0 +1,46 @@
+/* Other Classes */
+.text-justify {
+    text-align: justify;
+}
+
+.list-styled {
+    list-style-type: disc;
+}
+
+.translate-reflect {
+    transform: scaleX(-1);
+}
+
+.theme-text-primary {
+    color: $color-primary;
+}
+.theme-text-secondary {
+    color: $color-secondary;
+}
+
+
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x) {
+    width: 100%;
+    max-width: 1440px;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Usage
+.theme-container {
+    @include make-container();
+}
+
+.inset-0 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.transition-linear {
+    transition-timing-function: linear;
+}

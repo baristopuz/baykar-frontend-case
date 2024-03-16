@@ -1,0 +1,117 @@
+// @font-face {
+//     font-weight: 400;
+//     font-family: 'ataturk';
+//     font-style: normal;
+//     font-display: swap;
+//     src: local('ataturk'), local('ataturk'),
+//         url('../../../fonts/ataturk.woff') format('woff'),
+// }
+
+// @font-face {
+//     font-family: 'Ogg Roman';
+//     src: local('Ogg-Roman'),
+//         url('../../../fonts/Ogg-Roman.woff2') format('woff2'),
+//         url('../../../fonts/Ogg-Roman.woff') format('woff');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+
+html {
+    @include mq("mobile") {
+        // zoom: 0.8;
+    }
+}
+
+main {
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-black;
+}
+
+h1 {
+    @include mq("mobile") {
+        font-size: 56px;
+    }
+}
+
+
+p {
+    // color: #000;
+    color: $color-black;
+    // color: rgba($color: $color-black, $alpha: .75);
+    margin-bottom: 0;
+}
+
+a {
+    color: $color-black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    @extend %reset-button;
+}
+
+::selection {
+    color: $color-white;
+    background-color: $color-secondary;
+}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+    font-family: inherit;
+    line-height: 1.1em;
+}
+
+.odometer-formatting-mark {
+    display: none;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    margin-top: $margin-2xl;
+    margin-bottom: $margin-md;
+
+    .swiper-pagination-bullet {
+        width: 20px;
+        border-radius: 0px;
+        background-color: $color-primary;
+        transition: 450ms ease opacity, 450ms ease background-color;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+/* [+++++ ::: webkit scrollbar :::: +++++] */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dadada;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #09090d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: shade(#09090d, 20);
+}

@@ -1,0 +1,165 @@
+@mixin mq($width: "mobile") {
+    @if ($width=="mobile") {
+
+        // Medium devices (tablets, 768px and up)
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if ($width=="sm") {
+        @media (min-width: 577px) {
+            @content;
+        }
+    }
+
+    @else if ($width=="md") {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if ($width=="lg") {
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if ($width=="xl") {
+
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if ($width=="xxl") {
+
+        // XX-Large devices (larger desktops, 1400px and up)
+        @media (min-width: 1400px) {
+            @content;
+        }
+    }
+
+    @else if ($width=="big") {
+
+        // XX-Large devices (larger desktops, 1800px and up)
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+
+    @else if ($width=="2k") {
+
+        // XX-Large devices (larger desktops, 1800px and up)
+        @media (min-width: 2200px) {
+            @content;
+        }
+    }
+}
+
+@mixin transition($props...) {
+    $result: (
+    );
+
+@for $i from 1 through length($props) {
+    $prop: nth($props, $i);
+    $result: append($result, $prop);
+    $result: append($result, cubic-bezier(0, 0.15, 0.5, 1) 0.352s);
+
+    @if $i !=length($props) {
+        $result: append($result,
+                unquote($string: ",",
+                ));
+    }
+}
+
+transition: $result;
+}
+
+@mixin sliderTransition($props...) {
+    $result: (
+    );
+
+@for $i from 1 through length($props) {
+    $prop: nth($props, $i);
+    $result: append($result, $prop);
+    $result: append($result, cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s);
+
+    @if $i !=length($props) {
+        $result: append($result,
+                unquote($string: ",",
+                ));
+    }
+}
+
+transition: $result;
+}
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+%reset-button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    outline: none;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+
+    /* Remove excess padding and border in Firefox 4+ */
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+@mixin text-color-map($color-map, $name) {
+    @each $shade, $color in $color-map {
+        $class-name: ".text-#{$name}-#{$shade}";
+
+        #{$class-name} {
+            color: $color;
+        }
+    }
+}
+
+@mixin background-color-map($color-map, $name) {
+    @each $shade, $color in $color-map {
+        $class-name: ".bg-#{$name}-#{$shade}";
+
+        #{$class-name} {
+            background-color: $color;
+        }
+    }
+}
+
+
+@mixin pageReady() {
+    body.page-ready & {
+        @content;
+    }
+}

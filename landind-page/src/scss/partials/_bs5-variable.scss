@@ -1,0 +1,35 @@
+// --------------------Typography--------------------
+$font-size-base: 1.125rem;
+$font-family-sans-serif: 'Roboto', system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$h1-font-size: $font-size-base * 4;
+$h2-font-size: $font-size-base * 3.11;
+$h3-font-size: $font-size-base * 1.95;
+$h4-font-size: $font-size-base * 1.56;
+$h5-font-size: $font-size-base * 1.2;
+
+$headings-line-height: 1.2;
+$headings-margin-bottom: 0;
+$headings-font-weight: 400;
+
+$line-height-base: 1.7;
+$line-height-sm: 1.25;
+$line-height-lg: 1.7;
+
+$enable-negative-margins: true;
+
+
+$link-decoration: none !default;
+$link-color: #1b262c;
+$body-bg: #FFFBEB;
+$btn-border-radius: 0.5rem;
+
+$enable-smooth-scroll: true !default;
+
+$primary: #0F172A;
+$secondary: #78350F;
+
+// Reviews
+// background: #475569;
+// Footer
+// background: #E2E8F0;

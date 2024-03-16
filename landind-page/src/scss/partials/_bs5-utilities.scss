@@ -1,0 +1,223 @@
+// Enable responsive
+// $utilities: map-merge(
+//     $utilities,
+//     (
+//         "border":
+//             map-merge(
+//                 map-get($utilities, "border"),
+//                 (
+//                     responsive: true,
+//                 )
+//             ),
+//     )
+// );
+
+$utilities: (
+    "background-size": (
+        property: background-size,
+        class: bg-size,
+        responsive: true,
+        values: (
+            auto: auto,
+            cover: cover,
+            contain: contain,
+        ),
+    ),
+    "background-position": (
+        property: background-position,
+        class: bg-position,
+        responsive: true,
+        values: (
+            top: top,
+            right: right,
+            center: center,
+            bottom: bottom,
+            left: left,
+        ),
+    ),
+    "background-attachment": (
+        property: background-attachment,
+        class: bg-attachment,
+        responsive: true,
+        values: (
+            fixed: fixed,
+            local: local,
+            scroll: scroll,
+        ),
+    ),
+    "font-size": (
+        property: font-size,
+        class: text,
+        responsive: true,
+        values: (
+            xs: 0.75rem,
+            sm: 0.875rem,
+            base: 1rem,
+            md: 1.125rem,
+            lg: 1.25rem,
+            xl: 1.5rem,
+            2xl: 1.875rem,
+            3xl: 2.25rem,
+            4xl: 3rem,
+            5xl: 3.75rem,
+            6xl: 4.5rem,
+            7xl: 5.5rem,
+            8xl: 6.5rem,
+            9xl: 7.5rem,
+            10xl: 8rem,
+        ),
+    ),
+    "opacity": (
+        property: opacity,
+        values: (
+            0: 0,
+            10: 0.1,
+            20: 0.2,
+            30: 0.3,
+            40: 0.4,
+            50: 0.5,
+            60: 0.6,
+            70: 0.7,
+            80: 0.8,
+            90: 0.9,
+            100: 1,
+        ),
+    ),
+    "theme-section-padding": (
+        property: padding-top padding-bottom,
+        class: theme-section-padding,
+        responsive: true,
+        values: (
+            xs: 1.5rem,
+            sm: 3rem,
+            base: 4.5rem,
+            md: 6rem,
+            lg: 7.5rem,
+            xl: 9rem,
+            2xl: 10rem,
+            3xl: 11rem,
+            4xl: 12rem,
+            5xl: 13rem,
+            6xl: 14rem,
+            7xl: 15rem,
+            // 8xl: 6.5rem,
+            // 9xl: 7.5rem,
+            // 10xl: 8rem,,,,,,,,
+        ),
+    ),
+    "theme-section-padding-top": (
+        property: padding-top,
+        class: theme-section-padding-top,
+        responsive: true,
+        values: (
+            xs: 1.5rem,
+            sm: 3rem,
+            base: 4.5rem,
+            md: 6rem,
+            lg: 7.5rem,
+            xl: 9rem,
+            2xl: 10rem,
+            3xl: 11rem,
+            4xl: 12rem,
+            5xl: 13rem,
+            6xl: 14rem,
+            7xl: 15rem,
+            // 8xl: 6.5rem,
+            // 9xl: 7.5rem,
+            // 10xl: 8rem,,,,,,,,
+        ),
+    ),
+    "theme-section-padding-bottom": (
+        property: padding-bottom,
+        class: theme-section-padding-bottom,
+        responsive: true,
+        values: (
+            xs: 1.5rem,
+            sm: 3rem,
+            base: 4.5rem,
+            md: 6rem,
+            lg: 7.5rem,
+            xl: 9rem,
+            2xl: 10rem,
+            3xl: 11rem,
+            4xl: 12rem,
+            5xl: 13rem,
+            6xl: 14rem,
+            7xl: 15rem,
+            // 8xl: 6.5rem,
+            // 9xl: 7.5rem,
+            // 10xl: 8rem,,,,,,,,
+        ),
+    ),
+    "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+            null: var(--#{$prefix}border-radius),
+            0: 0,
+            1: 0.25rem,
+            2: 0.5rem,
+            3: 0.75rem,
+            4: 1rem,
+            5: 1.25rem,
+            6: 1.5rem,
+            7: 1.75rem,
+            8: 2rem,
+            9: 2.25rem,
+            10: 2.5rem,
+            11: 2.75rem,
+            12: 3rem,
+            circle: 50%,
+            pill: var(--#{$prefix}border-radius-pill),
+        ),
+    ),
+);
+
+// Rename Utilities
+// $utilities: map-merge(
+//   $utilities, (
+//     "margin-start": map-merge(
+//       map-get($utilities, "margin-start"),
+//       ( class: ml ),
+//     ),
+//   )
+// );
+
+// Remove multiple utilities with a comma-separated list
+// $utilities: map-remove($utilities, "width", "float");
+
+// ### Add, remove, modify ###
+// $utilities: map-merge(
+//     $utilities,
+//     (
+//         // Remove the `width` utility
+//         "width": null,
+
+//         // Make an existing utility responsive
+//         "border":
+//             map-merge(
+//                 map-get($utilities, "border"),
+//                 (
+//                     responsive: true,
+//                 )
+//             ),
+//         // Add new utilities
+//         "cursor":
+//             (
+//                 property: cursor,
+//                 class: cursor,
+//                 responsive: true,
+//                 values: auto pointer grab,
+//             )
+//     )
+// );
+
+// ### Remove utility in RTL ###
+// $utilities: (
+//   "word-wrap": (
+//     property: word-wrap word-break,
+//     class: text,
+//     values: (break: break-word),
+//     rtl: false
+//   ),
+// );

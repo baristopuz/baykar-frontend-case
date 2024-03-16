@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baykar Front-end Case</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="dist/css/main.bundle.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="site-header section-max-width">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <a href="#" class="text-secondary site-header-logo"> Collers </a>
+                <nav class="d-none d-lg-flex justify-content-center align-items-center gap-3">
+                    <a href="#">Products</a>
+                    <a href="#">Solutions</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Resources</a>
+                    <a href="#">Log In</a>
+                    <a href="#" class="site-header-btn">Sign up now</a>
+                </nav>
+                <span class="d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 5.5H13" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M21 12.5H8" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M21 19.5H3" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menü</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Menü öğelerini burada listeleyebiliriz. 
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="hero-blocks section-max-width position-relative section-max-width">
+        <div class="hero-rect d-none d-lg-block">
+            <img src="./assets/img/hero-rect.png" alt="">
+        </div>
+        <!-- ========== Start hero ========== -->
+        <section class="hero position-relative wrapper-section">
+            <div class="hero-rect d-lg-none">
+                <img src="./assets/img/hero-rect.png" alt="">
+            </div>
+            <div class="container">
+                <div class="d-flex flex-lg-row flex-column gap-5">
+                    <div class="hero-left-container">
+                        <div class="d-flex flex-column justify-content-center align-items-start gap-5">
+                            <h1 class="fw-bold text-primary text-center text-lg-start">Collectible Sneakers</h1>
+                            <p class="text-center text-lg-start">
+                                Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
+                                suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum
+                                ultrices amet.
+                            </p>
+                            <div class="d-flex justify-content-center align-items-center gap-4">
+                                <a href="#" class="hero-cta-btn">Sign up now</a>
+                                <a href="#" class="hero-cta-btn hero-cta-btn-not-outlined">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="28"
+                                        fill="currentColor">
+                                        <path
+                                            d="M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm4.126-6.254l-4.055 2.898c-.905.646-2.13.389-2.737-.576A2.201 2.201 0 0 1 7 12.898V7.102C7 5.942 7.883 5 8.972 5c.391 0 .774.124 1.099.356l4.055 2.898c.905.647 1.146 1.952.54 2.917a2.042 2.042 0 0 1-.54.575zM8.972 7.102v5.796L13.027 10 8.972 7.102z">
+                                        </path>
+                                    </svg>
+                                    <span>Watch Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-right-container">
+                        <div class="hero-img-container">
+                            <img class="lazy" src="./assets/img/shoe.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== End hero ========== -->
+
+        <!-- ========== Start features ========== -->
+        <section class="features position-relative wrapper-section section-max-width overflow-x-hidden">
+            <div class="container">
+                <div class="row gx-9 gy-5 gy-lg-0">
+                    <div class="col-lg-4">
+                        <div class="feature-card d-flex flex-column align-items-center align-items-lg-start gap-3">
+                            <div class="feature-card-icon-container">
+                                <div class="shape-container shape-container-1">
+                                    <img class="shape" src="./assets/img/shape-1.svg" alt="" />
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+                                    fill="none">
+                                    <path
+                                        d="M17.9875 10.6665H46.1685C46.1685 10.6665 43.8202 46.0188 32.0781 46.0188C26.342 46.0188 22.8476 37.5825 20.7736 28.9521C18.6019 19.9157 17.9875 10.6665 17.9875 10.6665Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M46.1685 10.6664C46.1685 10.6664 48.6251 8.04598 50.6667 7.99974C54.6667 7.90918 55.4061 10.6664 55.4061 10.6664C56.1891 12.2918 56.8152 16.5179 53.0579 20.4188C49.3003 24.3198 45.0941 27.7331 43.3824 28.952"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M17.9874 10.6669C17.9874 10.6669 15.4279 8.01662 13.3332 8.00027C9.33321 7.96904 8.59371 10.6669 8.59371 10.6669C7.81089 12.2923 7.18465 16.5183 10.9421 20.4193C14.6996 24.3203 19.062 27.7336 20.7734 28.9528"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M22.6843 53.3334C22.6843 48.4572 32.0779 46.019 32.0779 46.019C32.0779 46.019 41.4717 48.4572 41.4717 53.3334H22.6843Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <h3 class="text-lg fw-medium">Nibh viverra</h3>
+                            <p class="text-center text-lg-start">
+                                Sit bibendum donec dolor fames neque vulputate non sit aliquam.
+                                Consequat turpis natoque leo, massa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="feature-card d-flex flex-column align-items-center align-items-lg-start gap-3">
+                            <div class="feature-card-icon-container">
+                                <div class="shape-container shape-container-2">
+                                    <img class="shape" src="./assets/img/shape-2.svg" alt="" />
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64"
+                                    fill="none">
+                                    <path
+                                        d="M53.6667 53.3332L11 39.9998M53.6667 53.3332H11V39.9998L53.6667 53.3332ZM53.6667 53.3332V31.9998C53.6667 20.2178 44.1155 10.6665 32.3333 10.6665C30.2152 10.6665 28.1693 10.9752 26.2381 11.5499C17.4259 14.1726 11 22.3358 11 31.9998V39.9998L53.6667 53.3332Z"
+                                        stroke="#78350F" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M43 24V26.6667" stroke="#78350F" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M32.3333 21.3335V24.0002" stroke="#78350F" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M21.6667 18.6665V21.3332" stroke="#78350F" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <h3 class="text-lg fw-medium">Cursus amet</h3>
+                            <p class="text-center text-lg-start">
+                                Sit bibendum donec dolor fames neque vulputate non sit aliquam.
+                                Consequat turpis natoque leo, massa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="feature-card d-flex flex-column align-items-center align-items-lg-start gap-3">
+                            <div class="feature-card-icon-container">
+                                <div class="shape-container shape-container-3">
+                                    <img class="shape" src="./assets/img/shape-3.svg" alt="" />
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64"
+                                    fill="none">
+                                    <path
+                                        d="M6.00002 53.3332V23.9998C6.00002 21.0543 8.38783 18.6665 11.3334 18.6665H54C56.9456 18.6665 59.3334 21.0543 59.3334 23.9998V53.3332C59.3334 56.2788 56.9456 58.6665 54 58.6665H11.3334C8.38783 58.6665 6.00002 56.2788 6.00002 53.3332Z"
+                                        stroke="#78350F" stroke-width="1.5" />
+                                    <path d="M23.3334 6.6665L32.6667 15.9998L42 6.6665" stroke="#78350F"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <h3 class="text-lg fw-medium">Ipsum fermentum</h3>
+                            <p class="text-center text-lg-start">
+                                Sit bibendum donec dolor fames neque vulputate non sit aliquam.
+                                Consequat turpis natoque leo, massa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== End features ========== -->
+    </section>
+
+    <!-- ========== Start services ========== -->
+    <section class="services position-relative wrapper-section section-max-width overflow-x-hidden">
+        <div class="container">
+            <div class="row gap-9">
+                <div class="col-12">
+                    <div
+                        class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-lg-9 gap-5">
+                        <h2 class="text-white fw-bolder">The best of the best</h2>
+                        <a href="#"
+                            class="btn btn-outline-primary border-2 border-white text-white services-section-btn">
+                            <span class="fw-medium text-xl">Sign up now</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="position-relative">
+                        <div class="services-cards-backlight">
+                            <img class="" src="./assets/img/backlights.png" alt="" />
+                        </div>
+                        <div>
+                            <div class="row gx-5 gy-5 gy-lg-0 position-relative z-1">
+                                <div class="col-lg-4">
+                                    <div class="service-card">
+                                        <img src="./assets/img/pic_1.png" class="card-img-top" alt="..." />
+                                        <div class="service-card-body d-flex flex-column gap-3">
+                                            <h5 class="service-card-title">Title</h5>
+                                            <p class="service-card-text">
+                                                Egestas elit dui scelerisque ut eu purus aliquam vitae
+                                                habitasse.
+                                            </p>
+                                        </div>
+                                        <div class="service-card-footer">
+                                            <a href="#"
+                                                class="btn btn-outline-primary border-2 border-white w-100 text-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -4 24 24" width="24"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M7 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM.962 1.923A.962.962 0 0 1 .962 0h1.151c.902 0 1.682.626 1.878 1.506l1.253 5.642c.196.88.976 1.506 1.878 1.506h7.512l1.442-5.77H6.731a.962.962 0 0 1 0-1.922h9.345a1.923 1.923 0 0 1 1.866 2.39L16.5 9.12a1.923 1.923 0 0 1-1.866 1.457H7.122a3.846 3.846 0 0 1-3.755-3.012L2.113 1.923H.962z">
+                                                    </path>
+                                                </svg>
+                                                <span>Buy Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="service-card">
+                                        <img src="./assets/img/pic_2.png" class="card-img-top" alt="..." />
+                                        <div class="service-card-body d-flex flex-column gap-3">
+                                            <h5 class="service-card-title">Title</h5>
+                                            <p class="service-card-text">
+                                                Egestas elit dui scelerisque ut eu purus aliquam vitae
+                                                habitasse.
+                                            </p>
+                                        </div>
+                                        <div class="service-card-footer">
+                                            <a href="#"
+                                                class="btn btn-outline-primary border-2 border-white w-100 text-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -4 24 24" width="24"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M7 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM.962 1.923A.962.962 0 0 1 .962 0h1.151c.902 0 1.682.626 1.878 1.506l1.253 5.642c.196.88.976 1.506 1.878 1.506h7.512l1.442-5.77H6.731a.962.962 0 0 1 0-1.922h9.345a1.923 1.923 0 0 1 1.866 2.39L16.5 9.12a1.923 1.923 0 0 1-1.866 1.457H7.122a3.846 3.846 0 0 1-3.755-3.012L2.113 1.923H.962z">
+                                                    </path>
+                                                </svg>
+                                                <span>Buy Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="service-card">
+                                        <img src="./assets/img/pic_3.png" class="card-img-top" alt="..." />
+                                        <div class="service-card-body d-flex flex-column gap-3">
+                                            <h5 class="service-card-title">Title</h5>
+                                            <p class="service-card-text">
+                                                Egestas elit dui scelerisque ut eu purus aliquam vitae
+                                                habitasse.
+                                            </p>
+                                        </div>
+                                        <div class="service-card-footer">
+                                            <a href="#"
+                                                class="btn btn-outline-primary border-2 border-white w-100 text-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -4 24 24" width="24"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M7 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM.962 1.923A.962.962 0 0 1 .962 0h1.151c.902 0 1.682.626 1.878 1.506l1.253 5.642c.196.88.976 1.506 1.878 1.506h7.512l1.442-5.77H6.731a.962.962 0 0 1 0-1.922h9.345a1.923 1.923 0 0 1 1.866 2.39L16.5 9.12a1.923 1.923 0 0 1-1.866 1.457H7.122a3.846 3.846 0 0 1-3.755-3.012L2.113 1.923H.962z">
+                                                    </path>
+                                                </svg>
+                                                <span>Buy Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End services ========== -->
+
+    <!-- ========== Start cta ========== -->
+    <section class="cta position-relative wrapper-section section-max-width overflow-x-hidden">
+        <div class="container">
+            <div class="py-5">
+                <div class="cta-block">
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-9">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center align-items-lg-start gap-4 z-2">
+                            <h2 class="fw-bolder">Why join us</h2>
+                            <ul>
+                                <li>Est et in pharetra magna adipiscing ornare aliquam.</li>
+                                <li>Tellus arcu sed consequat ac velit ut eu blandit.</li>
+                                <li>Ullamcorper ornare in et egestas dolor orci.</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-outline-secondary border-2 fw-medium">Sign up now</a>
+                        </div>
+                        <div class="position-relative z-2">
+                            <img class="cta-media-img" src="./assets/img/media-video.png" alt="" />
+                            <img class="cta-media-img-ellipse" src="./assets/img/ellipse-green.png" alt="" />
+                        </div>
+                        <img class="cta-media-video-bg" src="./assets/img/media-video-bg.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End cta ========== -->
+
+    <!-- ========== Start testimonials ========== -->
+    <section class="testimonials position-relative wrapper-section section-max-width">
+        <div class="container-fluid">
+            <div class="row gy-10">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center gap-9">
+                            <h2 class="fw-bold">Because they love us</h2>
+                            <!-- testimonials Navigation -->
+                            <div
+                                class="testimonials-slider-controls position-relative d-flex justify-content-center align-items-center gap-4">
+                                <div
+                                    class="js-testimonials-slider-prev-btn testimonials-slider-prev-btn testimonials-slider-btn slider-default-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 54 54"
+                                        fill="none">
+                                        <g filter="url(#filter0_dd_1_1221)">
+                                            <rect x="4" y="3" width="46" height="46" rx="23" stroke="#78350F"
+                                                stroke-width="2" />
+                                            <path d="M33.5 26H21H33.5ZM21 26L27 20L21 26ZM21 26L27 32L21 26Z"
+                                                fill="#78350F" />
+                                            <path d="M21 26L27 32M33.5 26H21H33.5ZM21 26L27 20L21 26Z" stroke="#78350F"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_dd_1_1221" x="0" y="0" width="54" height="54"
+                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="1" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_1_1221" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="1" />
+                                                <feGaussianBlur stdDeviation="1.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="effect1_dropShadow_1_1221"
+                                                    result="effect2_dropShadow_1_1221" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect2_dropShadow_1_1221" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div
+                                    class="js-testimonials-slider-next-btn testimonials-slider-next-btn testimonials-slider-btn slider-default-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 54 54"
+                                        fill="none">
+                                        <g filter="url(#filter0_dd_1_1222)">
+                                            <rect x="4" y="3" width="46" height="46" rx="23" stroke="#78350F"
+                                                stroke-width="2" />
+                                            <path d="M21 26H33.5H21ZM33.5 26L27.5 20L33.5 26ZM33.5 26L27.5 32L33.5 26Z"
+                                                fill="#78350F" />
+                                            <path d="M33.5 26L27.5 32M21 26H33.5H21ZM33.5 26L27.5 20L33.5 26Z"
+                                                stroke="#78350F" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_dd_1_1222" x="0" y="0" width="54" height="54"
+                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset />
+                                                <feGaussianBlur stdDeviation="1" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                                    result="effect1_dropShadow_1_1222" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dy="1" />
+                                                <feGaussianBlur stdDeviation="1.5" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+                                                <feBlend mode="normal" in2="effect1_dropShadow_1_1222"
+                                                    result="effect2_dropShadow_1_1222" />
+                                                <feBlend mode="normal" in="SourceGraphic"
+                                                    in2="effect2_dropShadow_1_1222" result="shape" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="position-relative">
+                        <!-- testimonials Swiper -->
+                        <div class="swiper testimonials-slider js-testimonials-slider js-swiper-container overflow-y-visible"
+                            data-swiper='{"slidesPerView": 1.3, "spaceBetween": 24, "breakpoints":{"768":{"slidesPerView":2, "spaceBetween":24}, "992":{"slidesPerView":3, "spaceBetween":24}, "1440":{"slidesPerView":4, "spaceBetween":24}}, "centeredSlides":true, "loop":true, "autoplay": { "delay": 7500, "disableOnInteraction": true}, "preloadImages":false, "lazy":{"enabled":true,"loadPrevNext":true,"loadPrevNextAmount":2}, "pagination": {"el": ".js-testimonials-slider-pagination","clickable": true}, "navigation": {"prevEl": ".js-testimonials-slider-prev-btn" , "nextEl": ".js-testimonials-slider-next-btn"}}'>
+                            <div class="swiper-wrapper overflow-y-visible">
+                                <div class="swiper-slide">
+                                    <article class="testimonial-card">
+                                        <img src="./assets/img/logo-1.png" alt="" />
+                                        <p class="testimonial-card-content">
+                                            Non risus viverra enim, quis. Eget vitae arcu vivamus sit
+                                            tellus, viverra turpis lorem. Varius a turpis urna id
+                                            porttitor.
+                                        </p>
+                                        <div class="testimonial-card-meta">
+                                            <img src="./assets/img/user-1.png" alt="" />
+                                            <div>
+                                                <p class="testimonial-card-title">Hellen Jummy</p>
+                                                <p class="testimonial-card-subtitle">Team Lead</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonial-card">
+                                        <img src="./assets/img/logo-1.png" alt="" />
+                                        <p class="testimonial-card-content">
+                                            Non risus viverra enim, quis. Eget vitae arcu vivamus sit
+                                            tellus, viverra turpis lorem. Varius a turpis urna id
+                                            porttitor.
+                                        </p>
+                                        <div class="testimonial-card-meta">
+                                            <img src="./assets/img/user-1.png" alt="" />
+                                            <div>
+                                                <p class="testimonial-card-title">Hellen Jummy</p>
+                                                <p class="testimonial-card-subtitle">Team Lead</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonial-card">
+                                        <img src="./assets/img/logo-1.png" alt="" />
+                                        <p class="testimonial-card-content">
+                                            Non risus viverra enim, quis. Eget vitae arcu vivamus sit
+                                            tellus, viverra turpis lorem. Varius a turpis urna id
+                                            porttitor.
+                                        </p>
+                                        <div class="testimonial-card-meta">
+                                            <img src="./assets/img/user-1.png" alt="" />
+                                            <div>
+                                                <p class="testimonial-card-title">Hellen Jummy</p>
+                                                <p class="testimonial-card-subtitle">Team Lead</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonial-card">
+                                        <img src="./assets/img/logo-1.png" alt="" />
+                                        <p class="testimonial-card-content">
+                                            Non risus viverra enim, quis. Eget vitae arcu vivamus sit
+                                            tellus, viverra turpis lorem. Varius a turpis urna id
+                                            porttitor.
+                                        </p>
+                                        <div class="testimonial-card-meta">
+                                            <img src="./assets/img/user-1.png" alt="" />
+                                            <div>
+                                                <p class="testimonial-card-title">Hellen Jummy</p>
+                                                <p class="testimonial-card-subtitle">Team Lead</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonial-card">
+                                        <img src="./assets/img/logo-1.png" alt="" />
+                                        <p class="testimonial-card-content">
+                                            Non risus viverra enim, quis. Eget vitae arcu vivamus sit
+                                            tellus, viverra turpis lorem. Varius a turpis urna id
+                                            porttitor.
+                                        </p>
+                                        <div class="testimonial-card-meta">
+                                            <img src="./assets/img/user-1.png" alt="" />
+                                            <div>
+                                                <p class="testimonial-card-title">Hellen Jummy</p>
+                                                <p class="testimonial-card-subtitle">Team Lead</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="testimonial-card">
+                                        <img src="./assets/img/logo-1.png" alt="" />
+                                        <p class="testimonial-card-content">
+                                            Non risus viverra enim, quis. Eget vitae arcu vivamus sit
+                                            tellus, viverra turpis lorem. Varius a turpis urna id
+                                            porttitor.
+                                        </p>
+                                        <div class="testimonial-card-meta">
+                                            <img src="./assets/img/user-1.png" alt="" />
+                                            <div>
+                                                <p class="testimonial-card-title">Hellen Jummy</p>
+                                                <p class="testimonial-card-subtitle">Team Lead</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <!-- testimonials Pagination -->
+                            <div
+                                class="js-testimonials-slider-pagination testimonials-slider-pagination swiper-pagination d-none">
+                            </div>
+                        </div>
+                        <div class="testimonial-slider-background"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End testimonials ========== -->
+
+    <!-- ========== Start features-2 ========== -->
+    <section class="features-2 position-relative wrapper-section section-max-width overflow-x-hidden">
+        <img class="features-2-wave" src="./assets/img/cta-wave.png" alt="">
+        <div class="container position-relative z-1">
+            <div class="py-5">
+                <div class="row gy-10">
+                    <div class="col-12">
+                        <div class="d-flex flex-column justify-content-center align-items-start gap-5">
+                            <h2 class="fw-bold">Grow your collection</h2>
+                            <div>
+                                <p class="text-center text-lg-start">
+                                    Enim neque massa porta adipiscing elit. Sem libero id faucibus nibh amet dictum
+                                    pellentesque
+                                    sed. Eu non turpis risus odio sapien, fames sit rhoncus.
+                                </p>
+                                <p class="text-center text-lg-start">
+                                    Nec magna sed interdum sit purus tellus. Et volutpat proin neque placerat at
+                                    bibendum
+                                    quam
+                                    tellus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-start gap-10">
+                            <div>
+                                <ul class="nav features-2-tabs gap-3 d-flex flex-row flex-nowrap flex-lg-wrap flex-lg-column"
+                                    id="myTab" role="tablist">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 19 19" fill="none">
+                                                <path
+                                                    d="M8.50002 14.5C9.28795 14.5 10.0682 14.3448 10.7961 14.0433C11.5241 13.7418 12.1855 13.2998 12.7427 12.7427C13.2998 12.1855 13.7418 11.5241 14.0433 10.7961C14.3448 10.0682 14.5 9.28795 14.5 8.50002C14.5 7.71208 14.3448 6.93187 14.0433 6.20391C13.7418 5.47596 13.2998 4.81453 12.7427 4.25737C12.1855 3.70022 11.5241 3.25827 10.7961 2.95674C10.0682 2.65521 9.28795 2.50002 8.50002 2.50002C6.90872 2.50002 5.38259 3.13216 4.25737 4.25737C3.13216 5.38259 2.50002 6.90872 2.50002 8.50002C2.50002 10.0913 3.13216 11.6174 4.25737 12.7427C5.38259 13.8679 6.90872 14.5 8.50002 14.5ZM14.82 13.406L18.4 16.986C18.4955 17.0783 18.5716 17.1887 18.6239 17.3108C18.6762 17.4328 18.7037 17.564 18.7048 17.6968C18.7058 17.8296 18.6804 17.9613 18.63 18.0841C18.5797 18.207 18.5053 18.3186 18.4114 18.4124C18.3174 18.5062 18.2057 18.5804 18.0828 18.6306C17.9599 18.6808 17.8282 18.706 17.6954 18.7048C17.5626 18.7035 17.4314 18.6758 17.3095 18.6233C17.1875 18.5708 17.0772 18.4946 16.985 18.399L13.405 14.819C11.7975 16.0669 9.77481 16.6552 7.74877 16.4642C5.72273 16.2732 3.84562 15.3173 2.49957 13.7911C1.15351 12.2648 0.4397 10.283 0.503441 8.24894C0.567182 6.21492 1.40368 4.28164 2.84266 2.84266C4.28164 1.40368 6.21492 0.567182 8.24894 0.503441C10.283 0.4397 12.2648 1.15351 13.7911 2.49957C15.3173 3.84562 16.2732 5.72273 16.4642 7.74877C16.6552 9.77481 16.0669 11.7975 14.819 13.405L14.82 13.406Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                        <span class="text">Bibendum tellus</span>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M10.586 5.65692L6.636 1.70692C6.45384 1.51832 6.35305 1.26571 6.35533 1.00352C6.3576 0.741321 6.46277 0.490508 6.64818 0.3051C6.83359 0.119692 7.0844 0.0145233 7.3466 0.0122448C7.6088 0.00996641 7.8614 0.110761 8.05 0.292919L13.707 5.94992C13.8002 6.04257 13.8741 6.15273 13.9246 6.27407C13.9751 6.3954 14.001 6.52551 14.001 6.65692C14.001 6.78833 13.9751 6.91844 13.9246 7.03977C13.8741 7.16111 13.8002 7.27127 13.707 7.36392L8.05 13.0209C7.95775 13.1164 7.84741 13.1926 7.7254 13.245C7.6034 13.2974 7.47218 13.325 7.3394 13.3262C7.20662 13.3273 7.07494 13.302 6.95205 13.2517C6.82915 13.2015 6.7175 13.1272 6.62361 13.0333C6.52971 12.9394 6.45546 12.8278 6.40518 12.7049C6.3549 12.582 6.3296 12.4503 6.33075 12.3175C6.3319 12.1847 6.35949 12.0535 6.4119 11.9315C6.46431 11.8095 6.54049 11.6992 6.636 11.6069L10.586 7.65692H1C0.734784 7.65692 0.48043 7.55156 0.292893 7.36403C0.105357 7.17649 0 6.92214 0 6.65692C0 6.3917 0.105357 6.13735 0.292893 5.94981C0.48043 5.76228 0.734784 5.65692 1 5.65692H10.586Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="home2-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home2-tab-pane" type="button" role="tab"
+                                        aria-controls="home2-tab-pane" aria-selected="true">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 19 19" fill="none">
+                                                <path
+                                                    d="M8.50002 14.5C9.28795 14.5 10.0682 14.3448 10.7961 14.0433C11.5241 13.7418 12.1855 13.2998 12.7427 12.7427C13.2998 12.1855 13.7418 11.5241 14.0433 10.7961C14.3448 10.0682 14.5 9.28795 14.5 8.50002C14.5 7.71208 14.3448 6.93187 14.0433 6.20391C13.7418 5.47596 13.2998 4.81453 12.7427 4.25737C12.1855 3.70022 11.5241 3.25827 10.7961 2.95674C10.0682 2.65521 9.28795 2.50002 8.50002 2.50002C6.90872 2.50002 5.38259 3.13216 4.25737 4.25737C3.13216 5.38259 2.50002 6.90872 2.50002 8.50002C2.50002 10.0913 3.13216 11.6174 4.25737 12.7427C5.38259 13.8679 6.90872 14.5 8.50002 14.5ZM14.82 13.406L18.4 16.986C18.4955 17.0783 18.5716 17.1887 18.6239 17.3108C18.6762 17.4328 18.7037 17.564 18.7048 17.6968C18.7058 17.8296 18.6804 17.9613 18.63 18.0841C18.5797 18.207 18.5053 18.3186 18.4114 18.4124C18.3174 18.5062 18.2057 18.5804 18.0828 18.6306C17.9599 18.6808 17.8282 18.706 17.6954 18.7048C17.5626 18.7035 17.4314 18.6758 17.3095 18.6233C17.1875 18.5708 17.0772 18.4946 16.985 18.399L13.405 14.819C11.7975 16.0669 9.77481 16.6552 7.74877 16.4642C5.72273 16.2732 3.84562 15.3173 2.49957 13.7911C1.15351 12.2648 0.4397 10.283 0.503441 8.24894C0.567182 6.21492 1.40368 4.28164 2.84266 2.84266C4.28164 1.40368 6.21492 0.567182 8.24894 0.503441C10.283 0.4397 12.2648 1.15351 13.7911 2.49957C15.3173 3.84562 16.2732 5.72273 16.4642 7.74877C16.6552 9.77481 16.0669 11.7975 14.819 13.405L14.82 13.406Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                        <span class="text">Cras eget</span>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M10.586 5.65692L6.636 1.70692C6.45384 1.51832 6.35305 1.26571 6.35533 1.00352C6.3576 0.741321 6.46277 0.490508 6.64818 0.3051C6.83359 0.119692 7.0844 0.0145233 7.3466 0.0122448C7.6088 0.00996641 7.8614 0.110761 8.05 0.292919L13.707 5.94992C13.8002 6.04257 13.8741 6.15273 13.9246 6.27407C13.9751 6.3954 14.001 6.52551 14.001 6.65692C14.001 6.78833 13.9751 6.91844 13.9246 7.03977C13.8741 7.16111 13.8002 7.27127 13.707 7.36392L8.05 13.0209C7.95775 13.1164 7.84741 13.1926 7.7254 13.245C7.6034 13.2974 7.47218 13.325 7.3394 13.3262C7.20662 13.3273 7.07494 13.302 6.95205 13.2517C6.82915 13.2015 6.7175 13.1272 6.62361 13.0333C6.52971 12.9394 6.45546 12.8278 6.40518 12.7049C6.3549 12.582 6.3296 12.4503 6.33075 12.3175C6.3319 12.1847 6.35949 12.0535 6.4119 11.9315C6.46431 11.8095 6.54049 11.6992 6.636 11.6069L10.586 7.65692H1C0.734784 7.65692 0.48043 7.55156 0.292893 7.36403C0.105357 7.17649 0 6.92214 0 6.65692C0 6.3917 0.105357 6.13735 0.292893 5.94981C0.48043 5.76228 0.734784 5.65692 1 5.65692H10.586Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="home3-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 19 19" fill="none">
+                                                <path
+                                                    d="M8.50002 14.5C9.28795 14.5 10.0682 14.3448 10.7961 14.0433C11.5241 13.7418 12.1855 13.2998 12.7427 12.7427C13.2998 12.1855 13.7418 11.5241 14.0433 10.7961C14.3448 10.0682 14.5 9.28795 14.5 8.50002C14.5 7.71208 14.3448 6.93187 14.0433 6.20391C13.7418 5.47596 13.2998 4.81453 12.7427 4.25737C12.1855 3.70022 11.5241 3.25827 10.7961 2.95674C10.0682 2.65521 9.28795 2.50002 8.50002 2.50002C6.90872 2.50002 5.38259 3.13216 4.25737 4.25737C3.13216 5.38259 2.50002 6.90872 2.50002 8.50002C2.50002 10.0913 3.13216 11.6174 4.25737 12.7427C5.38259 13.8679 6.90872 14.5 8.50002 14.5ZM14.82 13.406L18.4 16.986C18.4955 17.0783 18.5716 17.1887 18.6239 17.3108C18.6762 17.4328 18.7037 17.564 18.7048 17.6968C18.7058 17.8296 18.6804 17.9613 18.63 18.0841C18.5797 18.207 18.5053 18.3186 18.4114 18.4124C18.3174 18.5062 18.2057 18.5804 18.0828 18.6306C17.9599 18.6808 17.8282 18.706 17.6954 18.7048C17.5626 18.7035 17.4314 18.6758 17.3095 18.6233C17.1875 18.5708 17.0772 18.4946 16.985 18.399L13.405 14.819C11.7975 16.0669 9.77481 16.6552 7.74877 16.4642C5.72273 16.2732 3.84562 15.3173 2.49957 13.7911C1.15351 12.2648 0.4397 10.283 0.503441 8.24894C0.567182 6.21492 1.40368 4.28164 2.84266 2.84266C4.28164 1.40368 6.21492 0.567182 8.24894 0.503441C10.283 0.4397 12.2648 1.15351 13.7911 2.49957C15.3173 3.84562 16.2732 5.72273 16.4642 7.74877C16.6552 9.77481 16.0669 11.7975 14.819 13.405L14.82 13.406Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                        <span class="text">Dolor pharetra</span>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M10.586 5.65692L6.636 1.70692C6.45384 1.51832 6.35305 1.26571 6.35533 1.00352C6.3576 0.741321 6.46277 0.490508 6.64818 0.3051C6.83359 0.119692 7.0844 0.0145233 7.3466 0.0122448C7.6088 0.00996641 7.8614 0.110761 8.05 0.292919L13.707 5.94992C13.8002 6.04257 13.8741 6.15273 13.9246 6.27407C13.9751 6.3954 14.001 6.52551 14.001 6.65692C14.001 6.78833 13.9751 6.91844 13.9246 7.03977C13.8741 7.16111 13.8002 7.27127 13.707 7.36392L8.05 13.0209C7.95775 13.1164 7.84741 13.1926 7.7254 13.245C7.6034 13.2974 7.47218 13.325 7.3394 13.3262C7.20662 13.3273 7.07494 13.302 6.95205 13.2517C6.82915 13.2015 6.7175 13.1272 6.62361 13.0333C6.52971 12.9394 6.45546 12.8278 6.40518 12.7049C6.3549 12.582 6.3296 12.4503 6.33075 12.3175C6.3319 12.1847 6.35949 12.0535 6.4119 11.9315C6.46431 11.8095 6.54049 11.6992 6.636 11.6069L10.586 7.65692H1C0.734784 7.65692 0.48043 7.55156 0.292893 7.36403C0.105357 7.17649 0 6.92214 0 6.65692C0 6.3917 0.105357 6.13735 0.292893 5.94981C0.48043 5.76228 0.734784 5.65692 1 5.65692H10.586Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="home4-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 19 19" fill="none">
+                                                <path
+                                                    d="M8.50002 14.5C9.28795 14.5 10.0682 14.3448 10.7961 14.0433C11.5241 13.7418 12.1855 13.2998 12.7427 12.7427C13.2998 12.1855 13.7418 11.5241 14.0433 10.7961C14.3448 10.0682 14.5 9.28795 14.5 8.50002C14.5 7.71208 14.3448 6.93187 14.0433 6.20391C13.7418 5.47596 13.2998 4.81453 12.7427 4.25737C12.1855 3.70022 11.5241 3.25827 10.7961 2.95674C10.0682 2.65521 9.28795 2.50002 8.50002 2.50002C6.90872 2.50002 5.38259 3.13216 4.25737 4.25737C3.13216 5.38259 2.50002 6.90872 2.50002 8.50002C2.50002 10.0913 3.13216 11.6174 4.25737 12.7427C5.38259 13.8679 6.90872 14.5 8.50002 14.5ZM14.82 13.406L18.4 16.986C18.4955 17.0783 18.5716 17.1887 18.6239 17.3108C18.6762 17.4328 18.7037 17.564 18.7048 17.6968C18.7058 17.8296 18.6804 17.9613 18.63 18.0841C18.5797 18.207 18.5053 18.3186 18.4114 18.4124C18.3174 18.5062 18.2057 18.5804 18.0828 18.6306C17.9599 18.6808 17.8282 18.706 17.6954 18.7048C17.5626 18.7035 17.4314 18.6758 17.3095 18.6233C17.1875 18.5708 17.0772 18.4946 16.985 18.399L13.405 14.819C11.7975 16.0669 9.77481 16.6552 7.74877 16.4642C5.72273 16.2732 3.84562 15.3173 2.49957 13.7911C1.15351 12.2648 0.4397 10.283 0.503441 8.24894C0.567182 6.21492 1.40368 4.28164 2.84266 2.84266C4.28164 1.40368 6.21492 0.567182 8.24894 0.503441C10.283 0.4397 12.2648 1.15351 13.7911 2.49957C15.3173 3.84562 16.2732 5.72273 16.4642 7.74877C16.6552 9.77481 16.0669 11.7975 14.819 13.405L14.82 13.406Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                        <span class="text">Amet, fringilla</span>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M10.586 5.65692L6.636 1.70692C6.45384 1.51832 6.35305 1.26571 6.35533 1.00352C6.3576 0.741321 6.46277 0.490508 6.64818 0.3051C6.83359 0.119692 7.0844 0.0145233 7.3466 0.0122448C7.6088 0.00996641 7.8614 0.110761 8.05 0.292919L13.707 5.94992C13.8002 6.04257 13.8741 6.15273 13.9246 6.27407C13.9751 6.3954 14.001 6.52551 14.001 6.65692C14.001 6.78833 13.9751 6.91844 13.9246 7.03977C13.8741 7.16111 13.8002 7.27127 13.707 7.36392L8.05 13.0209C7.95775 13.1164 7.84741 13.1926 7.7254 13.245C7.6034 13.2974 7.47218 13.325 7.3394 13.3262C7.20662 13.3273 7.07494 13.302 6.95205 13.2517C6.82915 13.2015 6.7175 13.1272 6.62361 13.0333C6.52971 12.9394 6.45546 12.8278 6.40518 12.7049C6.3549 12.582 6.3296 12.4503 6.33075 12.3175C6.3319 12.1847 6.35949 12.0535 6.4119 11.9315C6.46431 11.8095 6.54049 11.6992 6.636 11.6069L10.586 7.65692H1C0.734784 7.65692 0.48043 7.55156 0.292893 7.36403C0.105357 7.17649 0 6.92214 0 6.65692C0 6.3917 0.105357 6.13735 0.292893 5.94981C0.48043 5.76228 0.734784 5.65692 1 5.65692H10.586Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="home5-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 19 19" fill="none">
+                                                <path
+                                                    d="M8.50002 14.5C9.28795 14.5 10.0682 14.3448 10.7961 14.0433C11.5241 13.7418 12.1855 13.2998 12.7427 12.7427C13.2998 12.1855 13.7418 11.5241 14.0433 10.7961C14.3448 10.0682 14.5 9.28795 14.5 8.50002C14.5 7.71208 14.3448 6.93187 14.0433 6.20391C13.7418 5.47596 13.2998 4.81453 12.7427 4.25737C12.1855 3.70022 11.5241 3.25827 10.7961 2.95674C10.0682 2.65521 9.28795 2.50002 8.50002 2.50002C6.90872 2.50002 5.38259 3.13216 4.25737 4.25737C3.13216 5.38259 2.50002 6.90872 2.50002 8.50002C2.50002 10.0913 3.13216 11.6174 4.25737 12.7427C5.38259 13.8679 6.90872 14.5 8.50002 14.5ZM14.82 13.406L18.4 16.986C18.4955 17.0783 18.5716 17.1887 18.6239 17.3108C18.6762 17.4328 18.7037 17.564 18.7048 17.6968C18.7058 17.8296 18.6804 17.9613 18.63 18.0841C18.5797 18.207 18.5053 18.3186 18.4114 18.4124C18.3174 18.5062 18.2057 18.5804 18.0828 18.6306C17.9599 18.6808 17.8282 18.706 17.6954 18.7048C17.5626 18.7035 17.4314 18.6758 17.3095 18.6233C17.1875 18.5708 17.0772 18.4946 16.985 18.399L13.405 14.819C11.7975 16.0669 9.77481 16.6552 7.74877 16.4642C5.72273 16.2732 3.84562 15.3173 2.49957 13.7911C1.15351 12.2648 0.4397 10.283 0.503441 8.24894C0.567182 6.21492 1.40368 4.28164 2.84266 2.84266C4.28164 1.40368 6.21492 0.567182 8.24894 0.503441C10.283 0.4397 12.2648 1.15351 13.7911 2.49957C15.3173 3.84562 16.2732 5.72273 16.4642 7.74877C16.6552 9.77481 16.0669 11.7975 14.819 13.405L14.82 13.406Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                        <span class="text">Amet nibh</span>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M10.586 5.65692L6.636 1.70692C6.45384 1.51832 6.35305 1.26571 6.35533 1.00352C6.3576 0.741321 6.46277 0.490508 6.64818 0.3051C6.83359 0.119692 7.0844 0.0145233 7.3466 0.0122448C7.6088 0.00996641 7.8614 0.110761 8.05 0.292919L13.707 5.94992C13.8002 6.04257 13.8741 6.15273 13.9246 6.27407C13.9751 6.3954 14.001 6.52551 14.001 6.65692C14.001 6.78833 13.9751 6.91844 13.9246 7.03977C13.8741 7.16111 13.8002 7.27127 13.707 7.36392L8.05 13.0209C7.95775 13.1164 7.84741 13.1926 7.7254 13.245C7.6034 13.2974 7.47218 13.325 7.3394 13.3262C7.20662 13.3273 7.07494 13.302 6.95205 13.2517C6.82915 13.2015 6.7175 13.1272 6.62361 13.0333C6.52971 12.9394 6.45546 12.8278 6.40518 12.7049C6.3549 12.582 6.3296 12.4503 6.33075 12.3175C6.3319 12.1847 6.35949 12.0535 6.4119 11.9315C6.46431 11.8095 6.54049 11.6992 6.636 11.6069L10.586 7.65692H1C0.734784 7.65692 0.48043 7.55156 0.292893 7.36403C0.105357 7.17649 0 6.92214 0 6.65692C0 6.3917 0.105357 6.13735 0.292893 5.94981C0.48043 5.76228 0.734784 5.65692 1 5.65692H10.586Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="nav-link" id="home6-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 19 19" fill="none">
+                                                <path
+                                                    d="M8.50002 14.5C9.28795 14.5 10.0682 14.3448 10.7961 14.0433C11.5241 13.7418 12.1855 13.2998 12.7427 12.7427C13.2998 12.1855 13.7418 11.5241 14.0433 10.7961C14.3448 10.0682 14.5 9.28795 14.5 8.50002C14.5 7.71208 14.3448 6.93187 14.0433 6.20391C13.7418 5.47596 13.2998 4.81453 12.7427 4.25737C12.1855 3.70022 11.5241 3.25827 10.7961 2.95674C10.0682 2.65521 9.28795 2.50002 8.50002 2.50002C6.90872 2.50002 5.38259 3.13216 4.25737 4.25737C3.13216 5.38259 2.50002 6.90872 2.50002 8.50002C2.50002 10.0913 3.13216 11.6174 4.25737 12.7427C5.38259 13.8679 6.90872 14.5 8.50002 14.5ZM14.82 13.406L18.4 16.986C18.4955 17.0783 18.5716 17.1887 18.6239 17.3108C18.6762 17.4328 18.7037 17.564 18.7048 17.6968C18.7058 17.8296 18.6804 17.9613 18.63 18.0841C18.5797 18.207 18.5053 18.3186 18.4114 18.4124C18.3174 18.5062 18.2057 18.5804 18.0828 18.6306C17.9599 18.6808 17.8282 18.706 17.6954 18.7048C17.5626 18.7035 17.4314 18.6758 17.3095 18.6233C17.1875 18.5708 17.0772 18.4946 16.985 18.399L13.405 14.819C11.7975 16.0669 9.77481 16.6552 7.74877 16.4642C5.72273 16.2732 3.84562 15.3173 2.49957 13.7911C1.15351 12.2648 0.4397 10.283 0.503441 8.24894C0.567182 6.21492 1.40368 4.28164 2.84266 2.84266C4.28164 1.40368 6.21492 0.567182 8.24894 0.503441C10.283 0.4397 12.2648 1.15351 13.7911 2.49957C15.3173 3.84562 16.2732 5.72273 16.4642 7.74877C16.6552 9.77481 16.0669 11.7975 14.819 13.405L14.82 13.406Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                        <span class="text">Sed velit</span>
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M10.586 5.65692L6.636 1.70692C6.45384 1.51832 6.35305 1.26571 6.35533 1.00352C6.3576 0.741321 6.46277 0.490508 6.64818 0.3051C6.83359 0.119692 7.0844 0.0145233 7.3466 0.0122448C7.6088 0.00996641 7.8614 0.110761 8.05 0.292919L13.707 5.94992C13.8002 6.04257 13.8741 6.15273 13.9246 6.27407C13.9751 6.3954 14.001 6.52551 14.001 6.65692C14.001 6.78833 13.9751 6.91844 13.9246 7.03977C13.8741 7.16111 13.8002 7.27127 13.707 7.36392L8.05 13.0209C7.95775 13.1164 7.84741 13.1926 7.7254 13.245C7.6034 13.2974 7.47218 13.325 7.3394 13.3262C7.20662 13.3273 7.07494 13.302 6.95205 13.2517C6.82915 13.2015 6.7175 13.1272 6.62361 13.0333C6.52971 12.9394 6.45546 12.8278 6.40518 12.7049C6.3549 12.582 6.3296 12.4503 6.33075 12.3175C6.3319 12.1847 6.35949 12.0535 6.4119 11.9315C6.46431 11.8095 6.54049 11.6992 6.636 11.6069L10.586 7.65692H1C0.734784 7.65692 0.48043 7.55156 0.292893 7.36403C0.105357 7.17649 0 6.92214 0 6.65692C0 6.3917 0.105357 6.13735 0.292893 5.94981C0.48043 5.76228 0.734784 5.65692 1 5.65692H10.586Z"
+                                                    fill="#0F172A" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
+                                        <img src="./assets/img/tab-images.png" alt="">
+                                    </div>
+                                    <div class="tab-pane fade" id="home2-tab-pane" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
+                                        <img src="./assets/img/tab-images.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End features-2 ========== -->
+
+    <!-- ========== Start chart ========== -->
+    <section class="chart position-relative wrapper-section section-max-width overflow-x-hidden">
+        <div class="container">
+            <div class="py-5">
+                <div
+                    class="position-relative d-flex justify-content-start justify-content-lg-center align-items-center">
+                    <img class="chart-img" src="./assets/img/chart.png" alt="">
+                    <div
+                        class="position-absolute inset-0 d-flex justify-content-center align-items-center chart-ellipses-container">
+                        <img src="./assets/img/ellipses.png" alt="">
+                    </div>
+                    <div class="position-absolute inset-0 d-flex justify-content-center align-items-center flex-column chart-meta-container">
+                        <h2 class="h1 chart-title">11,658,467</h2>
+                        <p class="h2 chart-subtitle">Shoes Collected</p>
+                    </div>
+                    <div class="chart-product-container">
+                        <div
+                            class="chart-product-img-container d-flex flex-column justify-content-center align-items-center">
+                            <img class="chart-product-img" src="./assets/img/chart-product.png" alt="">
+                            <div class="chart-product-tooltip">
+                                <p>
+                                    Emma Simpson collected one pair of <b>Cool Shoes</b>.
+                                </p>
+                            </div>
+                            <img class="chart-product-tooltip-ellipse" src="./assets/img/ellipse-filled.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End chart ========== -->
+
+    <footer class="site-footer section-max-width">
+        <div class="container">
+            <div class="site-footer-top">
+                <div class="row gy-5 gy-lg-0">
+                    <div class="col-lg-3">
+                        <h2 class="footer-title">Product</h2>
+                        <nav class="footer-links">
+                            <a href="#">Pricing</a>
+                            <a href="#">Overview</a>
+                            <a href="#">Browse</a>
+                            <a href="#">Accessibility</a>
+                            <a href="#">Five</a>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <h2 class="footer-title">Solutions</h2>
+                        <nav class="footer-links">
+                            <a href="#">Brainstorming</a>
+                            <a href="#">Ideation</a>
+                            <a href="#">Wireframing</a>
+                            <a href="#">Research</a>
+                            <a href="#">Design</a>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <h2 class="footer-title">Support</h2>
+                        <nav class="footer-links">
+                            <a href="#">Contact Us</a>
+                            <a href="#">Developers</a>
+                            <a href="#">Documentation</a>
+                            <a href="#">Integrations</a>
+                            <a href="#">Reports</a>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="position-relative h-100 d-flex flex-column">
+                            <h2 class="footer-title">Get the App</h2>
+                            <nav class="footer-links-download">
+                                <a href="#">
+                                    <img src="./assets/img/apple-store.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/google-play.png" alt="">
+                                </a>
+                            </nav>
+                            <div class="footer-social-media mt-lg-auto">
+                                <h2 class="text-base fw-medium">Follow Us</h2>
+                                <nav class="footer-social-media-list">
+                                    <a href="#" class="youtube">
+                                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.812 0.0169912H4.145C1.855 0.0169912 0 1.85199 0 4.11599V9.88399C0 12.148 1.856 13.984 4.145 13.984H15.812C18.102 13.984 19.957 12.148 19.957 9.88399V4.11599C19.957 1.85199 18.101 0.0159912 15.812 0.0159912V0.0169912ZM13.009 7.27999L7.552 9.85499C7.51872 9.87102 7.48192 9.87836 7.44503 9.87634C7.40815 9.87433 7.37237 9.86301 7.34103 9.84345C7.3097 9.82389 7.28382 9.79672 7.2658 9.76447C7.24779 9.73222 7.23822 9.69593 7.238 9.65899V4.34999C7.23867 4.31286 7.24872 4.27651 7.26722 4.24432C7.28573 4.21212 7.31208 4.18513 7.34382 4.16587C7.37556 4.1466 7.41167 4.13568 7.44877 4.13413C7.48587 4.13258 7.52276 4.14044 7.556 4.15699L13.014 6.89199C13.0504 6.91012 13.0809 6.93814 13.102 6.97282C13.1232 7.0075 13.1341 7.04744 13.1336 7.08806C13.1331 7.12868 13.1211 7.16833 13.0991 7.20245C13.077 7.23658 13.0458 7.2638 13.009 7.28099V7.27999Z"
+                                                fill="#E2E8F0" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="facebook">
+                                        <svg width="10" height="20" viewBox="0 0 10 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M2.046 3.865V6.613H0.0319977V9.973H2.046V19.959H6.18V9.974H8.955C8.955 9.974 9.215 8.363 9.341 6.601H6.197V4.303C6.197 3.96 6.647 3.498 7.093 3.498H9.347V0H6.283C1.943 0 2.046 3.363 2.046 3.865Z"
+                                                fill="#E2E8F0" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="twitter">
+                                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 1.90701C19.2504 2.23439 18.4565 2.44905 17.644 2.54401C18.4968 2.04324 19.138 1.24912 19.448 0.310011C18.64 0.780339 17.7587 1.11161 16.841 1.29001C16.4545 0.885217 15.9897 0.563399 15.4748 0.34419C14.9598 0.124981 14.4056 0.0129768 13.846 0.0150114C11.58 0.0150114 9.743 1.82501 9.743 4.05501C9.743 4.37101 9.779 4.68001 9.849 4.97501C8.22358 4.89771 6.63212 4.48242 5.17617 3.75565C3.72022 3.02888 2.43176 2.00659 1.393 0.754011C1.02883 1.36841 0.837415 2.06979 0.839 2.78401C0.839697 3.45198 1.00683 4.10924 1.32529 4.6964C1.64375 5.28357 2.1035 5.78212 2.663 6.14701C2.01248 6.12601 1.37602 5.95234 0.805 5.64001V5.69001C0.805 7.64801 2.22 9.28101 4.095 9.65301C3.74261 9.74651 3.37958 9.79391 3.015 9.79401C2.75 9.79401 2.493 9.76901 2.242 9.71901C2.51008 10.5269 3.02311 11.2313 3.70982 11.7344C4.39653 12.2374 5.22284 12.5141 6.074 12.526C4.61407 13.6506 2.82182 14.2581 0.979 14.253C0.647 14.253 0.321 14.233 0 14.197C1.88125 15.3877 4.06259 16.0183 6.289 16.015C13.836 16.015 17.962 9.85801 17.962 4.51901L17.948 3.99601C18.7529 3.42968 19.4481 2.72186 20 1.90701Z"
+                                                fill="#E2E8F0" />
+                                        </svg>
+
+                                    </a>
+                                    <a href="#" class="instagram">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.017 2H7.947C6.37015 2.00185 4.85844 2.62914 3.74353 3.74424C2.62862 4.85933 2.00159 6.37115 2 7.948L2 16.018C2.00185 17.5948 2.62914 19.1066 3.74424 20.2215C4.85933 21.3364 6.37115 21.9634 7.948 21.965H16.018C17.5948 21.9631 19.1066 21.3359 20.2215 20.2208C21.3364 19.1057 21.9634 17.5938 21.965 16.017V7.947C21.9631 6.37015 21.3359 4.85844 20.2208 3.74353C19.1057 2.62862 17.5938 2.00159 16.017 2V2ZM19.957 16.017C19.957 16.5344 19.8551 17.0468 19.6571 17.5248C19.4591 18.0028 19.1689 18.4371 18.803 18.803C18.4371 19.1689 18.0028 19.4591 17.5248 19.6571C17.0468 19.8551 16.5344 19.957 16.017 19.957H7.947C6.90222 19.9567 5.90032 19.5415 5.16165 18.8026C4.42297 18.0638 4.008 17.0618 4.008 16.017V7.947C4.00827 6.90222 4.42349 5.90032 5.16235 5.16165C5.90122 4.42297 6.90322 4.008 7.948 4.008H16.018C17.0628 4.00827 18.0647 4.42349 18.8034 5.16235C19.542 5.90122 19.957 6.90322 19.957 7.948V16.018V16.017Z"
+                                                fill="#E2E8F0" />
+                                            <path
+                                                d="M11.982 6.819C10.6134 6.82112 9.30154 7.36579 8.33391 8.33361C7.36627 9.30143 6.82186 10.6134 6.82001 11.982C6.82159 13.3509 7.36603 14.6633 8.33391 15.6314C9.30179 16.5995 10.6141 17.1441 11.983 17.146C13.3521 17.1444 14.6647 16.5998 15.6328 15.6317C16.6008 14.6637 17.1454 13.3511 17.147 11.982C17.1449 10.6131 16.5999 9.30088 15.6317 8.33319C14.6634 7.3655 13.3509 6.82132 11.982 6.82V6.819ZM11.982 15.138C11.1452 15.138 10.3428 14.8056 9.75109 14.2139C9.15941 13.6222 8.82701 12.8198 8.82701 11.983C8.82701 11.1462 9.15941 10.3438 9.75109 9.75208C10.3428 9.1604 11.1452 8.828 11.982 8.828C12.8188 8.828 13.6213 9.1604 14.2129 9.75208C14.8046 10.3438 15.137 11.1462 15.137 11.983C15.137 12.8198 14.8046 13.6222 14.2129 14.2139C13.6213 14.8056 12.8188 15.138 11.982 15.138Z"
+                                                fill="#E2E8F0" />
+                                            <path
+                                                d="M17.156 8.095C17.8392 8.095 18.393 7.54118 18.393 6.858C18.393 6.17483 17.8392 5.621 17.156 5.621C16.4728 5.621 15.919 6.17483 15.919 6.858C15.919 7.54118 16.4728 8.095 17.156 8.095Z"
+                                                fill="#E2E8F0" />
+                                        </svg>
+
+                                    </a>
+                                    <a href="#" class="linkedin">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.959 11.719V19.098H15.681V12.213C15.681 10.483 15.062 9.303 13.514 9.303C12.332 9.303 11.628 10.099 11.319 10.868C11.206 11.143 11.177 11.526 11.177 11.911V19.098H6.897C6.897 19.098 6.955 7.438 6.897 6.229H11.177V8.053L11.149 8.095H11.177V8.053C11.745 7.178 12.76 5.927 15.033 5.927C17.848 5.927 19.959 7.767 19.959 11.719ZM2.421 0.026001C0.958 0.026001 0 0.986001 0 2.249C0 3.484 0.93 4.473 2.365 4.473H2.393C3.886 4.473 4.813 3.484 4.813 2.249C4.787 0.986001 3.887 0.026001 2.422 0.026001H2.421ZM0.254 19.098H4.532V6.229H0.254V19.098Z"
+                                                fill="#E2E8F0" />
+                                        </svg>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-bottom">
+                <a href="#">Collers @ 2023. All rights reserved.</a>
+                <div class="site-footer-bottom-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Contact</a>
+                    <a href="#">
+                        <span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.252 8C2.08416 8.6534 1.99949 9.32538 2 10C2 10.69 2.088 11.36 2.252 12H5.1C4.96518 10.6701 4.96518 9.32993 5.1 8H2.252ZM3.07 6H5.416C5.682 4.783 6.066 3.693 6.537 2.786C5.08518 3.48542 3.87722 4.60523 3.07 6ZM17.748 8H14.9C15.0348 9.32993 15.0348 10.6701 14.9 12H17.748C18.0847 10.6879 18.0847 9.31208 17.748 8ZM16.93 6C16.1228 4.60523 14.9148 3.48542 13.463 2.786C13.935 3.693 14.318 4.783 14.584 6H16.93ZM7.112 8C7.03708 8.66403 6.99968 9.33176 7 10C7 10.685 7.038 11.355 7.112 12H12.888C13.0386 10.6709 13.0386 9.32908 12.888 8H7.112ZM7.47 6H12.53C12.348 5.2483 12.0855 4.51841 11.747 3.823C11.119 2.568 10.447 2 10 2C9.552 2 8.881 2.568 8.253 3.823C7.938 4.455 7.673 5.19 7.47 6ZM3.07 14C3.87722 15.3948 5.08518 16.5146 6.537 17.214C6.065 16.307 5.682 15.217 5.416 14H3.07ZM16.93 14H14.584C14.318 15.217 13.934 16.307 13.463 17.214C14.9148 16.5146 16.1228 15.3948 16.93 14ZM7.47 14C7.673 14.81 7.938 15.545 8.253 16.177C8.881 17.432 9.553 18 10 18C10.448 18 11.119 17.432 11.747 16.177C12.062 15.545 12.327 14.81 12.53 14H7.47ZM10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20Z"
+                                    fill="#E2E8F0" />
+                            </svg>
+                        </span>
+                        <span>EN</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dist/js/main.bundle.js"></script>
+</body>
+
+</html>
